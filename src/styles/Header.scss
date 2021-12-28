@@ -1,0 +1,101 @@
+.header{
+     height: 3.5rem;
+     display: flex;
+     background-color: #131921;
+     position: sticky;
+     top: 0;
+     z-index: 100; 
+     .header_logo{
+        width: 10rem;
+        object-fit: contain;
+        margin: 0 5px;
+        vertical-align: center;
+        height: 100%;
+        @media screen and (max-width:650px){
+            width:7rem ;
+        }
+        @media screen and (max-width:450px){
+            width:5rem ;
+            height: 100%;
+        }
+       }
+       .header_search{
+           display: flex;
+           flex: 1;
+           align-items: center;
+           border-radius:1rem;
+           .header_searchInput{
+               height: 2rem;
+               padding: 10px;
+               border: none;
+               width: 100%;
+           }
+           .header_searchInput:focus{
+               border-top-style: hidden;
+               border-left-style: hidden;
+               border-right-style: hidden;
+               border-bottom-style: hidden;
+               outline: none;
+               font-size: medium;
+           }
+           .header_searchIcon{ 
+            background-color: #cd9042;
+            padding: 5px;
+            width: 2.5rem;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            height: 2rem !important; 
+   
+          }
+       }
+       .header_nav{
+           display: flex;
+           align-items: center;
+           justify-content: space-evenly;
+           .header_option:nth-child(3),.header_option:nth-child(2) {
+            @media screen and (max-width:600px){
+                display: none;
+            }
+           }
+           .header_option{
+               display: flex;
+               flex-direction: column;
+               margin-left: 10px;
+               margin-right: 10px;
+               color: white;
+               .header_optionLineOne{
+                font-size: 0.7rem;
+                 }
+            .header_optionLineTwo{
+                font-size: 1rem;
+                font-weight: 800;
+            }
+            .login{ 
+                display: flex;
+               flex-direction: column;
+               margin-left: 10px;
+               margin-right: 10px;
+               color: white;
+               text-decoration: none;
+                .header_optionLineOne{
+                    font-size: 0.7rem;
+                     }
+                .header_optionLineTwo{
+                    font-size: 1rem;
+                    font-weight: 800;
+                }
+            }
+            
+            
+           }
+           .header_optionBasket{
+            display: flex;
+            align-items: center;
+            color: white;
+            .header_basketCount{
+                margin-left: 0.4rem;
+                margin-right: 1rem;
+            }
+        }
+       }
+}
